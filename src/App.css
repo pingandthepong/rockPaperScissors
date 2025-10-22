@@ -118,6 +118,7 @@ header {
   }
 
   & .title {
+    font-family: var(--font-calm);
     font-size: 2rem;
     font-weight: 400;
     letter-spacing: 0.15rem;
