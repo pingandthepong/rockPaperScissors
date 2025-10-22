@@ -62,6 +62,7 @@ header {
 }
 
 .vs {
+  font-family: var(--font-play);
   font-size: 5rem;
   color: var(--color-gray-light);
   opacity: .5;
