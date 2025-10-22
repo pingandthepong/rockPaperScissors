@@ -67,7 +67,7 @@ header {
   opacity: .5;
   font-weight: 900;
   animation: pulse 2s ease-in-out infinite;
-  margin: 0 48px;
+  margin: 2.5vw;
 }
 
 @keyframes pulse {
@@ -261,6 +261,7 @@ button {
   right: 5%;
 }
 
+/* 13inch */
 @media (max-width: 1440px) {
   header {
       margin-bottom: 48px;
@@ -288,6 +289,103 @@ button {
   
       & .result {
         font-size: 2.5rem;
+      }
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  header {
+      & h1 {
+        font-size: 4rem;
+        margin-bottom: 16px;
+        line-height: 1.25;
+      }
+  
+      & p {
+        font-size: 1rem;
+      }
+    }
+  
+  
+    .box {
+      width: 240px;
+      padding: 32px;
+  
+      & .title {
+        font-size: 1.25rem;
+      }
+  
+      & .item-image {
+        font-size: 6rem;
+      }
+    }
+
+  .vs {
+    font-size: 3rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  body {
+    display: block;
+    height: auto;
+    padding: 24px;
+  }
+  header {
+    width: 50%;
+    text-align: left;
+    margin-bottom: 24px;
+
+    & h1 {
+      font-size: 1.25rem;
+    }
+    & p {
+      display: none;
+    }
+  }
+  .wrapper {
+    flex-direction: column;
+    
+    &.button-wrapper {
+      flex-direction: row;
+      margin-top: 24px;
+    }
+
+    & .box {
+      width: 200px;
+      border-width: 2px;
+      padding: 24px;
+
+      & .title {
+        font-size: 1rem;
+      }
+      & .item-image {
+        font-size: 5rem;
+      }
+      & .result {
+        font-size: 1.5rem;
+      }
+    }
+    & .vs {
+      font-size: 1.5rem;
+    }
+  }
+    button {
+      display: inline-block;
+      font-size: 2rem;
+      margin-top: 8px;
+
+      & .children {
+        position: absolute;
+        left: -9999px;
+      }
+
+
+
+      &.btn-reset {
+        font-size: 1rem;
       }
     }
 }

@@ -121,7 +121,7 @@ function App() {
         <p className="vs">VS</p>
         <Box title="computer" item={computerSelect} result={result} />
       </div>
-      <div className="wrapper">
+      <div className="wrapper button-wrapper">
         <Button play={play} title="rock"></Button>
         <Button play={play} title="paper"></Button>
         <Button play={play} title="scissors"></Button>
