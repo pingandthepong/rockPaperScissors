@@ -1,19 +1,5 @@
 import React from "react";
-
-const choice = {
-  rock: {
-    name: "Rock",
-    img: "✊🏻",
-  },
-  paper: {
-    name: "Paper",
-    img: "🤚🏻",
-  },
-  scissors: {
-    name: "Scissors",
-    img: "✌🏻",
-  },
-};
+import { choice } from "../data/gameData";
 
 const Button = (props) => {
   return (

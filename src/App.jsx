@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./component/Header";
 import Box from "./component/Box";
 import Button from "./component/Button";
+import { choice, rules, WIN, LOSE, TIE } from "./data/gameData";
 
 // 1. 박스 2개 (타이틀, 사진, 결과)
 // 2. 가위, 바위, 보 버튼
@@ -10,31 +11,6 @@ import Button from "./component/Button";
 // 4. 컴퓨터 아이템 랜덤 선택됨
 // 5. 3,4의 결과에 따라 승패 따짐
 // 6. 승패에 따라 테두리 색 변경됨 (win-초록, lose-빨강, 비기면-검은색)
-
-const choice = {
-  rock: {
-    name: "Rock",
-    img: "✊🏻",
-  },
-  paper: {
-    name: "Paper",
-    img: "🤚🏻",
-  },
-  scissors: {
-    name: "Scissors",
-    img: "✌🏻",
-  },
-};
-
-const rules = {
-  Rock: "Scissors",
-  Paper: "Rock",
-  Scissors: "Paper",
-};
-
-const WIN = "WIN 🎉";
-const LOSE = "LOSE 😭";
-const TIE = "TIE 😘";
 
 function App() {
   const [userSelect, setUserSelect] = useState(null);

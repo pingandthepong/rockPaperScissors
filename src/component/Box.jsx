@@ -1,8 +1,5 @@
 import React from "react";
-
-const WIN = "WIN 🎉";
-const LOSE = "LOSE 😭";
-const TIE = "TIE 😘";
+import { WIN, LOSE, TIE } from "../data/gameData";
 
 const Box = (props) => {
   let result; // props는 read-only로 직접 변경 불가 => 로컬 변수에 담아서 사용해야 함
@@ -32,7 +29,3 @@ const Box = (props) => {
 };
 
 export default Box;
-
-// WIN 🎉
-// LOSE 😭
-// TIE 😘
