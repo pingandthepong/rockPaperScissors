@@ -110,8 +110,9 @@ header {
     filter: drop-shadow(0 0 1rem var(--color-white));
     cursor: default;
     color: var(--color-yellow);
-    
+    animation: swing .65s ease-in-out;
   }
+
   & .result {
     font-family: var(--font-loud);
     font-size: 3rem;
@@ -120,6 +121,27 @@ header {
     text-shadow: 0 0 32px var(--color-green-op);
     /* color: var(--color-red);
     text-shadow: 0 0 32px var(--color-red-op); */
+  }
+}
+
+@keyframes swing {
+  20% {
+    transform: rotate(15deg) scale(1);
+  }
+
+  40% {
+    transform: rotate(-10deg) scale(1.1);
+  }
+
+  60% {
+    transform: rotate(5deg) scale(1.2);
+  }
+
+  80% {
+    transform: rotate(-5deg) scale(1.1);
+  }
+  to {
+    transform: rotate(0deg) scale(1);
   }
 }
 
