@@ -65,7 +65,7 @@ function App() {
   const judgement = (user, computer) => {
     const WIN = "WIN 🎉";
     const LOSE = "LOSE 😭";
-    const TIE = "Tie 😘";
+    const TIE = "TIE 😘";
 
     if (user.name === computer.name) return TIE;
     return rules[user.name] === computer.name ? WIN : LOSE;
