@@ -56,11 +56,21 @@ function App() {
     return obj[final]; // {name: "~~", img: "~~"}
   };
 
+  const rules = {
+    Rock: "Scissors",
+    Paper: "Rock",
+    Scissors: "Paper",
+  };
+
   const judgement = (user, computer) => {
     const WIN = "WIN 🎉";
     const LOSE = "LOSE 😭";
     const TIE = "Tie 😘";
 
+    if (user.name === computer.name) return TIE;
+    return rules[user.name] === computer.name ? WIN : LOSE;
+
+    // 하드코딩1
     // if (
     //   (user.name === "Rock" && computer.name === "Scissors") ||
     //   (user.name === "Paper" && computer.name === "Rock") ||
@@ -77,14 +87,15 @@ function App() {
     //   return TIE;
     // }
 
-    if (user.name === computer.name) {
-      return TIE;
-    } else if (user.name === "Rock")
-      return computer.name === "Scissors" ? WIN : LOSE;
-    else if (user.name === "Paper")
-      return computer.name === "Rock" ? WIN : LOSE;
-    else if (user.name === "Scissors")
-      return computer.name === "Paper" ? WIN : LOSE;
+    // 하드코딩2
+    // if (user.name === computer.name) {
+    //   return TIE;
+    // } else if (user.name === "Rock")
+    //   return computer.name === "Scissors" ? WIN : LOSE;
+    // else if (user.name === "Paper")
+    //   return computer.name === "Rock" ? WIN : LOSE;
+    // else if (user.name === "Scissors")
+    //   return computer.name === "Paper" ? WIN : LOSE;
   };
 
   return (
