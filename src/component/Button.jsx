@@ -17,9 +17,7 @@ const choice = {
 
 const Button = (props) => {
   return (
-    <button
-      className={`btn ${props.title}`}
-      onClick={() => props.play(props.title)}>
+    <button className={props.title} onClick={() => props.play(props.title)}>
       <span className="btn-icon">{choice[props.title]["img"]}</span>
       {props.title}
       <span className="effect"></span>

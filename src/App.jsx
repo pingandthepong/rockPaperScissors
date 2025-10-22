@@ -109,6 +109,10 @@ function App() {
     //   return computer.name === "Paper" ? WIN : LOSE;
   };
 
+  const handleReset = () => {
+    location.reload();
+  };
+
   return (
     <>
       <Header />
@@ -122,6 +126,9 @@ function App() {
         <Button play={play} title="paper"></Button>
         <Button play={play} title="scissors"></Button>
       </div>
+      <button className="btn-reset" onClick={handleReset}>
+        reset
+      </button>
     </>
   );
 }

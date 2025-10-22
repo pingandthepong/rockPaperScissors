@@ -203,14 +203,13 @@ button {
   margin-top: 40px;
   cursor: pointer;
   transition: all .25s ease-in-out;
-
-  &.btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    position: relative;
-    overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 2s ease-out;
     
     &.rock {
       background: linear-gradient(to right, #ff6900, #e7000b);
@@ -253,7 +252,13 @@ button {
       transform: translateX(-100%);
       transition: all .7s ease;
     }
-  }
+  
+}
+
+.btn-reset {
+  position: absolute;
+  top: 2%;
+  right: 5%;
 }
 
 @media (max-width: 1440px) {
