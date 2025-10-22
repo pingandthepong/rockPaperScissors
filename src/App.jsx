@@ -27,17 +27,28 @@ const choice = {
 
 function App() {
   const [userSelect, setUserSelect] = useState(null);
+  const [computerSelect, setComputerSelect] = useState(null);
 
   const play = (userChoice) => {
     setUserSelect(choice[userChoice]);
+    setComputerSelect(randomChoice(choice));
   };
+
+  // 재사용을 위해 매개변수 사용
+  const randomChoice = (obj) => {
+    let keys = Object.keys(obj); // (3) ['rock', 'paper', 'scissors']
+    let randomIdx = Math.floor(Math.random() * keys.length); // 0, 1, 2
+    let final = keys[randomIdx];
+    return obj[final];
+  };
+
   return (
     <>
       <Header />
       <div className="wrapper">
         <Box title="you" item={userSelect} />
         <p className="vs">VS</p>
-        <Box title="computer" />
+        <Box title="computer" item={computerSelect} />
       </div>
       <div className="wrapper">
         <button onClick={() => play("rock")}>rock</button>
