@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Header from "./component/Header";
 import Box from "./component/Box";
+import Button from "./component/Button";
 
 // 1. 박스 2개 (타이틀, 사진, 결과)
 // 2. 가위, 바위, 보 버튼
@@ -117,9 +118,9 @@ function App() {
         <Box title="computer" item={computerSelect} result={result} />
       </div>
       <div className="wrapper">
-        <button onClick={() => play("rock")}>rock</button>
-        <button onClick={() => play("paper")}>paper</button>
-        <button onClick={() => play("scissors")}>scissors</button>
+        <Button play={play} title="rock"></Button>
+        <Button play={play} title="paper"></Button>
+        <Button play={play} title="scissors"></Button>
       </div>
     </>
   );

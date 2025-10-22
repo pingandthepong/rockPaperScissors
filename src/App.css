@@ -198,10 +198,62 @@ button {
   margin: 0 8px;
   text-transform: uppercase;
   padding: 12px 24px;
-  border: 1px solid #000;
+  border: .1px solid var(--color-white);
   border-radius: 8px;
   margin-top: 40px;
   cursor: pointer;
+  transition: all .25s ease-in-out;
+
+  &.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    overflow: hidden;
+    
+    &.rock {
+      background: linear-gradient(to right, #ff6900, #e7000b);
+
+      &:hover {
+        background: linear-gradient(to right, #f54900, #c10007);
+      }
+    }
+    &.paper {
+      background: linear-gradient(to right, #2b7fff, #0092b8);
+      
+        &:hover {
+          background: linear-gradient(to right, #155dfb, #007595);
+        }
+    }
+    &.scissors {
+      background: linear-gradient(to right, #ad46ff, #e60076);
+      
+        &:hover {
+          background: linear-gradient(to right, #9810fa, #c6005b);
+        }
+    }
+
+    &:hover {
+      & .effect {
+        transform: translateX(100%);
+      }
+    }
+    &:active {
+      transform: scale(1.1);
+    }
+    & .effect {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, transparent, rgba(255,255,255,.2) 20%, transparent);
+      z-index: 1;
+      transform: translateX(-100%);
+      transition: all .7s ease;
+    }
+  }
 }
 
 @media (max-width: 1440px) {
