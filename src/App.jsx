@@ -25,6 +25,16 @@ const choice = {
   },
 };
 
+const rules = {
+  Rock: "Scissors",
+  Paper: "Rock",
+  Scissors: "Paper",
+};
+
+const WIN = "WIN 🎉";
+const LOSE = "LOSE 😭";
+const TIE = "TIE 😘";
+
 function App() {
   const [userSelect, setUserSelect] = useState(null);
   const [computerSelect, setComputerSelect] = useState(null);
@@ -37,13 +47,23 @@ function App() {
     setComputerSelect(computerChoice);
     setResult(judgement(choice[userChoice], computerChoice));
 
-    // 리렌더 될때마다 .item-image에 .swing 클래스 붙였다 떼기 (리액트는 다른 방법 있는걸로 알고있는데 아직 몰라서 다음에 적용해보겠습니다)
+    // 리렌더 될때마다 애니메이션 (리액트는 다른 방법 있는걸로 알고있는데 아직 몰라서 다음에 적용해보겠습니다)
     const itemImages = document.querySelectorAll(".item-image");
+    const results = document.querySelectorAll(".result");
+
     itemImages.forEach((itemImage) => {
       itemImage.classList.add("swing");
 
       setTimeout(() => {
         itemImage.classList.remove("swing");
+      }, 1000);
+    });
+
+    results.forEach((result) => {
+      result.classList.add("fadeInUp");
+
+      setTimeout(() => {
+        result.classList.remove("fadeInUp");
       }, 1000);
     });
   };
@@ -56,17 +76,7 @@ function App() {
     return obj[final]; // {name: "~~", img: "~~"}
   };
 
-  const rules = {
-    Rock: "Scissors",
-    Paper: "Rock",
-    Scissors: "Paper",
-  };
-
   const judgement = (user, computer) => {
-    const WIN = "WIN 🎉";
-    const LOSE = "LOSE 😭";
-    const TIE = "TIE 😘";
-
     if (user.name === computer.name) return TIE;
     return rules[user.name] === computer.name ? WIN : LOSE;
 
