@@ -84,15 +84,13 @@ header {
   aspect-ratio: 1 / 1.25;
   border-radius: 40px;
   text-transform: uppercase;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding-top: 48px;
   background: rgba(255,255,255,.15);
   border: 4px solid var(--color-green);
   /* box-shadow: 0 0 32px var(--color-green-op); */
   border: 4px solid var(--color-primary-dark);
   transition: scale .5s ease-out;
+  animation: fadeInUp .5s ease-in-out;
 
   &:hover {
     scale: 1.05;
@@ -103,6 +101,7 @@ header {
     font-weight: 400;
     letter-spacing: 0.15rem;
     color: var(--color-white);
+    margin-bottom: 8px;
   }
   & .item-image {
     height: 13rem;
@@ -111,7 +110,10 @@ header {
     filter: drop-shadow(0 0 1rem var(--color-white));
     cursor: default;
     color: var(--color-yellow);
-    animation: swing .65s ease-in-out;
+
+    &.swing {
+      animation: swing .65s ease-in-out;
+    }
   }
 
   & .result {
@@ -122,6 +124,17 @@ header {
     text-shadow: 0 0 32px var(--color-green-op);
     /* color: var(--color-red);
     text-shadow: 0 0 32px var(--color-red-op); */
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 10%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
   }
 }
 
