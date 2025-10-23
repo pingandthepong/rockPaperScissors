@@ -2,9 +2,9 @@
 
 <br>
 
-## 🌐 배포 주소
+## 🚀 배포 링크
 
-[https://pingandthepong.dothome.co.kr/rockPaperScissors/](https://pingandthepong.dothome.co.kr/rockPaperScissors/)
+[🎮 프로젝트 바로가기](https://pingandthepong.dothome.co.kr/rockPaperScissors/)
 
 <br>
 
